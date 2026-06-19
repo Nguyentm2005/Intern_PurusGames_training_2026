@@ -203,6 +203,7 @@ class UIUpgradeHolder extends GameUI{
         UIUpgradeHolder.plusButton.src = 'assetGame/plusButton.png';
     }
     draw(){
+        if (!UIUpgradeHolder.Holder.complete || UIUpgradeHolder.Holder.naturalWidth === 0) return;
         this.context.imageSmoothingEnabled = false;
         let holderWidth = this.width;
         let holderHeight = holderWidth * (UIUpgradeHolder.Holder.height/UIUpgradeHolder.Holder.width);
@@ -217,13 +218,15 @@ class UIUpgradeHolder extends GameUI{
             holderHeight
         );
         
-        this.context.drawImage(
-            this.IconImage,
-            holderDrawX+20,
-            this.y-holderHeight/2*0.5,
-            holderWidth*0.2,
-            holderWidth*0.2
-        );
+        if (this.IconImage.complete && this.IconImage.naturalWidth !== 0) {
+            this.context.drawImage(
+                this.IconImage,
+                holderDrawX + 20,
+                this.y - holderHeight / 2 * 0.5,
+                holderWidth * 0.2,
+                holderWidth * 0.2
+            );
+        }
 
         this.context.filStyle = 'white';
         this.context.font ='Bold 15px Arial';
