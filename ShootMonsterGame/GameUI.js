@@ -168,7 +168,7 @@ class UpgradeUI extends GameUI{
         let ySection2 = y +(height/3) + (height/3)*0.5;
         let ySection3 = y +(height/3)*2 + (height/3)*0.5;
         let xSection = x+width/2;
-        this.fastReload = new UIUpgradeHolder(this.context,this.canvas,xSection,ySection1,width-40,'assetGame/reloadIcon.png');
+        this.fastReload = new UIUpgradeHolder(this.context,this.canvas,xSection,ySection1,width-40,'assetGame/reloadicon.png');
         this.increaseDamage = new UIUpgradeHolder(this.context,this.canvas,xSection, ySection2,width-40,'assetGame/increaseDamageIcon.png');
         this.decreaseRecoil = new UIUpgradeHolder(this.context,this.canvas,xSection,ySection3,width-40,'assetGame/recoilIcon.png');
     }
