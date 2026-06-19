@@ -116,15 +116,9 @@
             
         }
         isCollisionWithBall(ball){
-            return !(ball.y - ball.radius < this.y ||
-                    ball.y + ball.radius > this.y + this.height ||
-                    ball.x + ball.radius < this.x ||
-                    ball.x - ball.radius > this.x + this.width);
-                    // return !(
-                    //     ball.x + ball.radius < this.x ||
-                    //     ball.x - ball.radius > this.x + this.width ||
-                    //     ball.y + ball.radius < this.y ||
-                    //     ball.y - ball.radius > this.y + this.height
-                    // );
+            return (ball.x + ball.radius >= this.x &&
+                    ball.x - ball.radius <= this.x + this.width &&
+                    ball.y + ball.radius >= this.y &&
+                    ball.y - ball.radius <= this.y + this.height);
         }
     }
