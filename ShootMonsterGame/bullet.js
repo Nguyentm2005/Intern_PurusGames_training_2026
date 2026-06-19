@@ -9,7 +9,7 @@ class bullet extends gameObject{
     }
     loadImage(){
         bullet.spriteBullet = new Image();
-        bullet.spriteBullet.src = "assetGame/bulletOutput.png";
+        bullet.spriteBullet.src = "assetGame/BulletOutput.png";
     }
     update(secondPassed){
         this.x += this.vx * secondPassed;
