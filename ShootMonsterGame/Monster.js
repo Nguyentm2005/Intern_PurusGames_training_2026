@@ -74,10 +74,7 @@ class monster extends gameObject{
         );
 
         this.context.restore();
-        this.context.beginPath();
         this.context.fillStyle = "red";
-        this.context.arc(this.x,this.y,this.radius,0,2*Math.PI);
-        this.context.stroke();
     }
     update(secondPassed, shooterX,shooterY){
         this.x += this.vx * this.monsterSpeed * secondPassed;
